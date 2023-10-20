@@ -6,11 +6,15 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:25:06 by mman              #+#    #+#             */
-/*   Updated: 2023/10/20 14:25:33 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/20 16:32:41 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include <stdlib.h>
+
+// return The converted value or 0 on error.
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	polarity;
