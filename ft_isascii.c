@@ -6,7 +6,7 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:15:56 by mman              #+#    #+#             */
-/*   Updated: 2023/10/20 16:22:36 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/21 14:51:07 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,15 @@
 
 // whether c is a 7-bit unsigned char value that  fits  into ASCII character set.
 
-int ft_iascii(int c);
+int ft_isascii(int c)
+{
+	return (c >= 0 && c < 128);
+}
+
+// int	main(void)
+// {
+// 	char whatever = 'ř';
+// 	int	stuff = ft_isascii(whatever);
+// 	printf("isascii for %c;  %d", whatever, stuff);
+// 	return (0);
+// }
