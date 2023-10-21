@@ -6,7 +6,7 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:41:29 by mman              #+#    #+#             */
-/*   Updated: 2023/10/21 19:48:58 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/21 19:51:58 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	found = 0;
 	while (!found)
 	{
-		
+
 	}
 }
 
