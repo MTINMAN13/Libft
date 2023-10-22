@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mfraj <mfraj@student.42prague.com>         +#+  +:+       +#+        */
+/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 14:06:25 by mfraj             #+#    #+#             */
-/*   Updated: 2023/10/16 21:06:12 by mfraj            ###   ########.fr       */
+/*   Updated: 2023/10/22 01:23:20 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // #include <stdio.h>
-// allocates storage space for an array of number 
+// allocates storage space for an array of number
 // elements, each of length size bytes
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	void	*mem;
+	void	*mm;
 	size_t	total_size;
 
-	if (nmemb == 0 || size == 0)
+	if (count == 0 || size == 0)
 	{
-		mem = malloc(0);
-		return (mem);
+		mm = malloc(0);
+		return (mm);
 	}
-	total_size = nmemb * size;
-	if (total_size / nmemb != size)
+	total_size = count * size;
+	if (total_size / count != size)
 		return (NULL);
-	mem = malloc(total_size);
-	if (!mem)
+	mm = malloc(total_size);
+	if (!mm)
 		return (NULL);
-	ft_bzero(mem, total_size);
-	return (mem);
+	ft_bzero(mm, total_size);
+	return (mm);
 }
 
 // int main()

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:41:29 by mman              #+#    #+#             */
-/*   Updated: 2023/10/21 19:52:34 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/22 11:52:51 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,25 @@
 // where no more than len characters are searched (not searched after a '\0')
 
 // if little is empty string, big is returned
-// if little occurs nowhere in big, NULL is returned
+// if litztle occurs nowhere in big, NULL is returned
 // otherwise pointer to the first char of first occured little is returned
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	llen;
-	int		found;
+	size_t		i;
+	int			length;
 
-	llen = ft_strlen(little);
-	found = 0;
-	while (!found)
+	if (*little == '\0')
+		return ((char *)big);
+	i = 0;
+	length = ft_strlen((char *)little);
+	while ((((char *)big)[i] != '\0' && (i + length) <= len) && (len != 0))
 	{
-
+		if (ft_strncmp(((char *)big + i), (char *)little, length) == 0)
+		{
+			return ((char *)big + i);
+		}
+		i++;
 	}
-}
-
-
-int	main(void)
-{
-	const char *largestring = "Foo Bar Baz";
-	const char *smallstring = "Bar";
-	char *ptr;
-
-	ptr = strnstr(largestring, smallstring, 4);
+	return (NULL);
 }
