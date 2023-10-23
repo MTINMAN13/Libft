@@ -6,14 +6,14 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:14:14 by mman              #+#    #+#             */
-/*   Updated: 2023/10/22 11:55:18 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/22 22:55:53 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-static int	isinset (char const *compared, char const *set)
+static int	isinset(char const *compared, char const *set)
 {
 	int	i;
 

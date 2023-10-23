@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:42:39 by mman              #+#    #+#             */
-/*   Updated: 2023/10/21 16:51:33 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/23 15:10:27 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

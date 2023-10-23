@@ -3,37 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:39:40 by mman              #+#    #+#             */
-/*   Updated: 2023/10/21 17:39:55 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/22 22:59:24 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	unsigned char	*subst;
 
+	if (n == 0)
+		return (0);
 	i = 0;
-	while (s[i])
-		i++;
-	if (start > i)
-		return (NULL);
-	if ((start + len) < i)
-		subst = malloc(len + 1);
-	else
-		subst = malloc(i - start + 1);
-	i = 0;
-	while (len > 0)
+	while (s1[i] == s2[i] && s1[i] != '\0')
 	{
-		subst[i] = s[start + i];
-		i++;
-		len--;
+		if (i < (n - 1))
+			i++;
+		else
+			return (0);
 	}
-	subst[i] = '\0';
-	return (subst);
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
