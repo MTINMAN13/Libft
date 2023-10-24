@@ -5,20 +5,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	cloc;
-	int	buffer;
+	char	*occurance;
 
-	cloc = -1;
-	buffer = 0;
-	if (s == NULL)
-		return (NULL);
-	while (s[buffer] != '\0') {
-		if (s[buffer] == c) {
-			cloc = buffer;
-		}
-		buffer++;
+	occurance = NULL;
+	if (c == '\0')
+		return ((char*)s + ft_strlen(s));
+	while (*s)
+	{
+		if (*s == (char)c)
+			occurance = (char *)s;
+		s++;
 	}
-	if (cloc == -1)
-		return (NULL);
-	return ((char *)(s + buffer));
+	return (occurance);
 }

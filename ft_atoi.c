@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:25:06 by mman              #+#    #+#             */
-/*   Updated: 2023/10/24 15:21:08 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 18:28:56 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,28 @@
 
 // return The converted value or 0 on error.
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int	i;
-	int	polarity;
-	int	result;
+	int		sign;
+	int		result;
+	int		i;
 
-	polarity = 1;
-	i = 0;
 	result = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\r')
+	sign = 1;
+	i = 0;
+	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' ' ||
+			str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		i++;
-		polarity *= -1;
+		if (str[i++] == '-')
+			sign = -1;
 	}
-	else if (str[i] == '+')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-		return (result);
-	while (str[i] >= '0' && str[i] <= '9')
-		result = result * 10 + (str[i++] - '0');
-	result *= polarity;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		result *= 10;
+		result += str[i++] - '0';
+	}
+	result *= sign;
 	return (result);
 }
