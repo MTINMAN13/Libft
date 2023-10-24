@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:49:44 by mman              #+#    #+#             */
-/*   Updated: 2023/10/22 22:59:46 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 14:37:58 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);
-	if (size > 0)
+	if (size <= dstlen)
+		return srclen + size;
+
+	while (src[i] && dstlen + i < size - 1)
 	{
-		while (src[i] && i < (size - 1))
-		{
-			dst[dstlen + i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		dst[dstlen + i] = src[i];
+		i++;
 	}
-	return (srclen + dstlen);
+	dst[dstlen + i] = '\0';
+
+	return srclen + dstlen;
 }

@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 22:16:05 by apple             #+#    #+#             */
-/*   Updated: 2023/10/22 22:18:43 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 15:26:41 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	unsigned int i;
 
 	if (s != NULL && f != NULL)
 	{
 		i = 0;
-		while (s[i++])
+		while (s[i])
+		{
 			(*f)(i, &s[i]);
+			i++;
+		}
 	}
 }

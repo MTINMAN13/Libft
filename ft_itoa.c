@@ -1,52 +1,41 @@
 
 #include "libft.h"
 
-static int	size(int i)
+static int	ft_numlen(int n, int base)
 {
-	size_t	size;
+	int	count;
 
-	if (i == 0)
-		return (2);
-	size = 1;
-	if (i < 0)
-	{
-		i /= 10;
-		size += 2;
-		i = -i;
-	}
-	while (i > 0)
-	{
-		i /= 10;
-		size++;
-	}
-	return (size);
+	count = 0;
+	if (n <= 0)
+		++count;
+	while (n && ++count)
+		n /= base;
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	size_t		len;
-	int			sign;
+	int			len;
+	char		*ret;
+	const char	*digits;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	len = size(n);
-	sign = 0;
+	digits = "0123456789";
+		len = ft_numlen(n, 10);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
+		return (0);
+	ret[len] = 0;
+	if (n == 0)
+		ret[0] = '0';
 	if (n < 0)
+		ret[0] = '-';
+	while (n)
 	{
-		sign = 1;
-		n = -n;
-	}
-	str = (char *)malloc(len);
-	if (str == NULL)
-		return (NULL);
-	str[--len] = '\0';
-	while (--len >= sign)
-	{
-		str[len] = n % 10 + '0';
+		if (n > 0)
+			ret[--len] = digits[n % 10];
+		else
+			ret[--len] = digits[n % 10 * -1];
 		n /= 10;
 	}
-	if (sign)
-		str[0] = '-';
-	return (str);
+	return (ret);
 }

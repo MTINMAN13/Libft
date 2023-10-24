@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:25:06 by mman              #+#    #+#             */
-/*   Updated: 2023/10/22 23:02:59 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 15:21:08 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,15 @@ int	ft_atoi(const char *str)
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
 		|| str[i] == '\r')
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-')
 	{
-		if (str[i] == '-')
-		{
-			i++;
-			polarity *= -1;
-		}
-		else if (str[i] == '+')
-			i++;
+		i++;
+		polarity *= -1;
 	}
+	else if (str[i] == '+')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		return (result);
 	while (str[i] >= '0' && str[i] <= '9')
 		result = result * 10 + (str[i++] - '0');
 	result *= polarity;

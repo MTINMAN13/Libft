@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 22:11:14 by apple             #+#    #+#             */
-/*   Updated: 2023/10/22 22:11:18 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 15:43:17 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &s, ft_strlen(s));
+	size_t	len;
+
+	if (!(s) || fd < 0)
+		return ;
+	len = ft_strlen(s);
+	write(fd, s, len);
 }

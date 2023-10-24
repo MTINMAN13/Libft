@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:16:02 by mman              #+#    #+#             */
-/*   Updated: 2023/10/22 22:58:59 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/23 21:11:10 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int				offset;
+	size_t				offset;
 	unsigned char	*derefds;
 
 	derefds = (unsigned char *)s;

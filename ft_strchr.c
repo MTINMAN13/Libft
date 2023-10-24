@@ -6,7 +6,7 @@
 /*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:36:19 by mman              #+#    #+#             */
-/*   Updated: 2023/10/22 11:56:34 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/24 14:45:57 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ char	*ft_strchr(const char *s, int c)
 	int	cloc;
 
 	cloc = 0;
-	while ((s[cloc] != c) && s[cloc])
+	if (s == NULL)
+		return (NULL);
+	while (s[cloc])
+	{
+		if (s[cloc] == c)
+			return ((char *)&s[cloc]);
 		cloc++;
-	return ((char *)(s + cloc));
+	}
+	return (NULL);
 }
