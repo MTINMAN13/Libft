@@ -3,39 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:34:33 by mman              #+#    #+#             */
-/*   Updated: 2023/10/24 15:24:53 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/27 16:02:39 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-#include "libft.h"
-
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *new_str;
-	size_t i = start;
-	size_t j = 0;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
 
+	i = start;
+	j = 0;
 	if (!s)
 		return (NULL);
-
-	if (start >= ft_strlen(s)) {
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	}
-
-	if (!(new_str = (char *)malloc(len + 1)))
+	new_str = (char *)malloc(len + 1);
+	if (new_str == NULL)
 		return (NULL);
-
-	while (s[i] && j < len) {
+	while (s[i] && j < len)
 		new_str[j++] = s[i++];
-	}
-
 	new_str[j] = '\0';
-
 	return (new_str);
 }

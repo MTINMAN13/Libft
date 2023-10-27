@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 22:16:05 by apple             #+#    #+#             */
-/*   Updated: 2023/10/24 15:26:41 by apple            ###   ########.fr       */
+/*   Created: 2023/10/22 22:16:05 by mman              #+#    #+#             */
+/*   Updated: 2023/10/27 15:54:36 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	if (s != NULL && f != NULL)
 	{

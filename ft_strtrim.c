@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:14:14 by mman              #+#    #+#             */
-/*   Updated: 2023/10/24 15:03:51 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/27 15:47:51 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s1 || !set)
 		return (0);

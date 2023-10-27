@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:25:06 by mman              #+#    #+#             */
-/*   Updated: 2023/10/24 18:28:56 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/27 15:47:28 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // return The converted value or 0 on error.
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		sign;
 	int		result;
@@ -23,8 +23,8 @@ int		ft_atoi(const char *str)
 	result = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' ' ||
-			str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
+	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
+			|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
