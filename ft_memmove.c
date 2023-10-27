@@ -6,7 +6,7 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:16:12 by mman              #+#    #+#             */
-/*   Updated: 2023/10/27 17:25:38 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/27 17:47:14 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (len == 0)
 		return (dst);
-	if (dst == NULL && src == NULL && len == 0)
+	if (((dst == NULL && src == NULL) && len == 0)
+		|| ((dst == NULL && src == NULL)))
 		return (NULL);
 	source = (char *)src;
 	destination = (char *)dst;
