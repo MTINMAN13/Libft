@@ -6,7 +6,7 @@
 #    By: apple <apple@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 20:04:35 by apple             #+#    #+#              #
-#    Updated: 2023/10/23 21:18:30 by apple            ###   ########.fr        #
+#    Updated: 2023/10/28 16:36:28 by apple            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ SOURCES = \
 	ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c ft_strrchr.c
 
-# BSOURCES = \
-# 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-# 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BSOURCES = \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJECTS = $(SOURCES:.c=.o)
-# BOBJECTS = $(BSOURCES:.c=.o)
+BOBJECTS = $(BSOURCES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
