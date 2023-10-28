@@ -6,6 +6,8 @@
 		"ranges": "c",
 		"span": "c",
 		"utility": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"*.tcc": "c",
+		"string": "c"
 	}
 }

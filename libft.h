@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 17:18:00 by mman              #+#    #+#             */
-/*   Updated: 2023/10/24 14:37:38 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/28 20:42:14 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,14 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+
+void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void*));
+t_list			*ft_lstlast(t_list *lst);
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *));
+t_list			*ft_lstnew(void *content);
+int				ft_lstsize(t_list *lst);
 #endif

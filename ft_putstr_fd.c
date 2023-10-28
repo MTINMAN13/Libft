@@ -6,7 +6,7 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 22:11:14 by mman              #+#    #+#             */
-/*   Updated: 2023/10/27 15:54:08 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/28 20:41:09 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	len;
-
-	if (!(s) || fd < 0)
+	if (!(s))
 		return ;
-	len = ft_strlen(s);
-	write(fd, s, len);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }

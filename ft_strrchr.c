@@ -6,27 +6,26 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:00:01 by mman              #+#    #+#             */
-/*   Updated: 2023/10/27 17:45:54 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/28 20:42:30 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// returns a pointer to the LAST occurrence of character c in the string s
-// or to the null byte at the end if none
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*occurance;
+	char	*chr;
 
+	chr = (char *)s;
 	occurance = NULL;
 	if (c == '\0')
-		return ((char *)s + ft_strlen(s));
-	while (*s)
+		return (chr + ft_strlen(s));
+	while (*chr)
 	{
-		if (*s == (char)c)
-			occurance = (char *)s;
-		s++;
+		if (*chr == c)
+			occurance = chr;
+		chr++;
 	}
 	return (occurance);
 }

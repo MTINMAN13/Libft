@@ -1,5 +1,9 @@
 # 42-1-libft
 
+######
+The -> (arrow) operator in C is used to access the members of a structure or a union through a pointer to that structure or union.
+-> is used to access the members of the structure or union through a poitner 
+
 ### last improved
 27-10 norm check done on site @42Prague
 (v10) Edit done 18;31 --- WarMachine Test Pass SUCCESS
@@ -25,6 +29,7 @@ ft_lstlast
 3) PUTCHAR | ft_putchar_fd(char, fd)
 
 ### memmory
+
 
 
 
