@@ -1,10 +1,12 @@
 # 42-1-libft
 
 vohiyo this is my motherfucking libft
-i went through like 956604351310 iterations of strchr and strrchr, fuck those bitches
 
-i like cats and good fucking yes
-also classical music and good high class drama
+i went through like 956604351310 iterations of strchr and strrchr,
+
+ fuck those bitches
+
+i like cats and good fucking, classical music and good high class drama
 
 anyway
 
