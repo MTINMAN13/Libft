@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:36:19 by mman              #+#    #+#             */
-/*   Updated: 2023/10/28 21:10:48 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/28 21:33:18 by apple            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-    //    The strchr() function returns a pointer to the first occurrence
-    //    of the character c in the string s.
-	//    WE return a pointer to the
-    //    matched character or NULL if the character is not found.  The
-    //    terminating null byte is considered part of the string, so that
-    //    if c is specified as '\0', these functions return a pointer to
-    //    the terminator.
+//    The strchr() function returns a pointer to the first occurrence
+//    of the character c in the string s.
+//    WE return a pointer to the
+//    matched character or NULL if the character is not found.  The
+//    terminating null byte is considered part of the string, so that
+//    if c is specified as '\0', these functions return a pointer to
+//    the terminator.
 
 #include <string.h>
 #include "libft.h"
