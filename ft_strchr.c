@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apple <apple@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:36:19 by mman              #+#    #+#             */
-/*   Updated: 2023/10/28 21:33:18 by apple            ###   ########.fr       */
+/*   Updated: 2023/10/28 22:05:40 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (s == NULL)
-		return (NULL);
 	while (*s)
 	{
 		if (*s == (char)c)

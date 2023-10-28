@@ -6,7 +6,7 @@
 /*   By: mman <mman@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:00:01 by mman              #+#    #+#             */
-/*   Updated: 2023/10/28 20:42:30 by mman             ###   ########.fr       */
+/*   Updated: 2023/10/28 22:16:08 by mman             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*occurance;
-	char	*chr;
+	int			s_len;
+	const char	*end;
 
-	chr = (char *)s;
-	occurance = NULL;
+	s_len = ft_strlen(s);
+	end = s + s_len - 1;
 	if (c == '\0')
-		return (chr + ft_strlen(s));
-	while (*chr)
+	return ((char *)s + s_len);
+		while (end >= s)
 	{
-		if (*chr == c)
-			occurance = chr;
-		chr++;
+		if (*end == (char)c)
+			return ((char *)end);
+		end--;
 	}
-	return (occurance);
+	return (NULL);
 }

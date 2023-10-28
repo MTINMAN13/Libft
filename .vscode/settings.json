@@ -8,6 +8,7 @@
 		"utility": "c",
 		"string.h": "c",
 		"*.tcc": "c",
-		"string": "c"
+		"string": "c",
+		"random": "c"
 	}
 }
