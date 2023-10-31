@@ -39,7 +39,7 @@ char	**ft_split(char const *s, char c)
 
 	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
 	if (!s || !lst)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (*s)
 	{

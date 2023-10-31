@@ -1,5 +1,7 @@
 # 42-1-libft
 
+### okay i am 100% sure it will pass as the edgecases i dont have covered honestly fucking suck
+
 ######
 The -> (arrow) operator in C is used to access the members of a structure or a union through a pointer to that structure or union.
 -> is used to access the members of the structure or union through a poitner
