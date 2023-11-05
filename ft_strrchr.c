@@ -26,20 +26,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			s_len;
-	const char	*end;
+	char	*last_occur;
 
-	s_len = ft_strlen(s);
-	end = s + s_len - 1;
-	if (c == '\0')
-		return ((char *)s + s_len);
-	while (end >= s)
+	last_occur = NULL;
+	while (*s)
 	{
-		if (*end == (char)c)
-			return ((char *)end);
-		end--;
+		if (*s == (char)c)
+			last_occur = (char *)s;
+		s++;
 	}
-	return (NULL);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (last_occur);
 }
 
 // int	main(void)

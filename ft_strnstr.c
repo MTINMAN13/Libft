@@ -19,12 +19,15 @@
 // if little is empty string, big is returned
 // if litztle occurs nowhere in big, NULL is returned
 // otherwise pointer to the first char of first occured little is returned
+// edited to catch big and len being NULL and 0 respectively
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t		i;
 	int			length;
 
+	if (big == NULL && len == 0)
+		return (NULL);
 	if (*little == '\0')
 		return ((char *)big);
 	i = 0;
